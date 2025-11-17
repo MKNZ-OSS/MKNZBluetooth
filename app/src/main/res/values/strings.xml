@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bluetooth</string>
+    <string name="unknown_title">Без названия</string>
+    <string name="unknown_artist">Неизвестный исполнитель</string>
+</resources>

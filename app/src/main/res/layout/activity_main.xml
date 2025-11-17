@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/art"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/music_note_inset"
+            android:background="?attr/colorPrimaryContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            android:layout_margin="16dp"
+            app:shapeAppearanceOverlay="@style/Theme.Art" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="?attr/textAppearanceTitleLarge"
+            app:layout_constraintTop_toBottomOf="@+id/art"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/unknown_title" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/artist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/unknown_artist" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/artist"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:text="0:00 / 0:00"
+            android:layout_marginEnd="12dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/time"
+            android:layout_marginTop="12dp"
+            android:gravity="center">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previous_button"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                app:iconGravity="textStart"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/previous" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_button"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:iconGravity="textStart"
+                app:iconSize="48dp"
+                app:cornerRadius="32dp"
+                app:icon="@drawable/play" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_button"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                app:iconGravity="textStart"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/next" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

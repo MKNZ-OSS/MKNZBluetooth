@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.Bluetooth" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar" />
+    <style name="Theme.Art" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>
